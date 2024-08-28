@@ -152,7 +152,7 @@ async def handle_connection(websocket, path):
 
 async def main():
     print('Starting WebSocket server...')
-    server = await websockets.serve(handle_connection, "192.168.70.171", 3000)
+    server = await websockets.serve(handle_connection, "0.0.0.0", 3000)
     
     print('WebSocket server started on ws://192.168.70.171:3000')
     await server.wait_closed()
